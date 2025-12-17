@@ -14,7 +14,7 @@ public class NewfileEntity {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "should not contain spaces")
-    @
+    @column(unique=true)
     private String name;
     @column(name=unique)
      @NotBlank(message = "no blank allowed")
