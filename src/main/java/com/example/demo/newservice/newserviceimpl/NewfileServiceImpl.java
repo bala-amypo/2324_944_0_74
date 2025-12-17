@@ -2,6 +2,9 @@ package com.example.demo.newserviceimpl;
 
 @Service
 public class newserviceimpl implements NewfileService{
+    private final NewfileRepo rep;
+
+    NewfileServiceImp
 
     @Override
     public NewfileEntity savedata(NewfileEntity newfile){
