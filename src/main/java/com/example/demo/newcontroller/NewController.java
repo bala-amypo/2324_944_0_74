@@ -1,10 +1,8 @@
 package com.example.demo.newcontroller;
-
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.example.demo.entity.Student;
 import com.example.demo.newentity.NewfileEntity;
 import com.example.demo.newservice.NewfileService;
@@ -12,11 +10,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/students")
-public class StudentController {
+public class NewController {
 
     private final NewfileService service;
 
-    public StudentController(NewfileService service) {
+    public NewController(NewfileService service) {
         this.service = service;
     }
 
