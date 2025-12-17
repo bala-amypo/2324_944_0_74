@@ -6,9 +6,11 @@ import jakarta.validation.constraints.NotBlank;
 public class NewfileEntity{
     @Id
     private long id;
-    @NotBlank(message = can be anythin)
+    @NotBlank(message = "no spaces")
     private String name;
     @colunm(name=unique)
+    @NotBlank(message = "no blank allowed")
+    @Email(message="invalid format")
     private String email;
 
 
