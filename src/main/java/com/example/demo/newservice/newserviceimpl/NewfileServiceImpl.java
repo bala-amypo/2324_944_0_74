@@ -34,7 +34,7 @@ public class newserviceimpl implements NewfileService{
     }    
      @Override
     public void delete(Long id){
-        return rep.remove(id);//remove the column id
+       rep.delete(Long id);//remove the column id
     }
 
 
