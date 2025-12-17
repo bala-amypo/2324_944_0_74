@@ -26,7 +26,10 @@ public class newserviceimpl implements NewfileService{
     }
      @Override
     public NewfileEntity update(Long id, NewfileEntity newfile){
-        return rep.replace(id,newfile);//retrive id from newfile and update
+        NewfileEntity existing=getidval(id);
+        existing.setName(newfile.getName());
+        existing.setEmail(newfile.getEmail());
+        return rep.save(existing);//retrive id from newfile and update
 
     }    
      @Override
