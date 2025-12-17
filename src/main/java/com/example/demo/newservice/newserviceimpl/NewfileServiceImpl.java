@@ -26,12 +26,12 @@ public class newserviceimpl implements NewfileService{
     }
      @Override
     public NewfileEntity update(Long id, NewfileEntity newfile){
-        return rep.replace(id,newfile);//retrive id 
+        return rep.replace(id,newfile);//retrive id from newfile and update
 
     }    
      @Override
     public void delete(Long id){
-        return rep.remove(id);
+        return rep.remove(id);//remove the column id
     }
 
 
