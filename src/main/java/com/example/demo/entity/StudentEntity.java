@@ -3,10 +3,15 @@ package com.example.demo.entity;
 import java.time.LocalDate;
 
 public class Studententity {
+    @id
+    @generateValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @generateValue(strategy = GenerationType.Auto)
     private String name;
-    private int id;
-    private LocalDate date;
-    private float cgpa;
+    @column(name=email)
+    private string email;
+    private string password;
+    
 
     
 
