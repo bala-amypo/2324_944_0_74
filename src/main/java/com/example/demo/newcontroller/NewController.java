@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import com.example.demo.entity.Student;
 import com.example.demo.newentity.NewfileEntity;
 import com.example.demo.newservice.NewfileService;
-
 import java.util.List;
 
 @RestController
@@ -23,8 +22,7 @@ public class StudentController {
 
     @PostMapping
     public ResponseEntity<Student> createStudent(@Valid @RequestBodyStudent service) {
-        return new ResponseEntity<>(service.saveStudent(student),
-                HttpStatus.CREATE);
+        return new ResponseEntity<>(service.saveStudent(student),HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -38,10 +36,8 @@ public class StudentController {
     }
 
     @PutMapping("/{id}")
-    public Student updateStudent(
-            @PathVariable Long id,
-            @Valid @RequestBody Student student) {
-
+    public NewfileEntity updateStudent(@PathVariable Long id,
+    @Valid @RequestBody Student student) {
         return service.update(id, student);
     }
 
