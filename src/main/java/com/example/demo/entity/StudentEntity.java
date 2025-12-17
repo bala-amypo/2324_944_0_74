@@ -1,26 +1,49 @@
 package com.example.demo.entity;
 
+import java.time.LocalDate;
 
-import jakarta.persistence.*;
-public class StudentEntity{
-
-    private Long id;
+public class Studententity {
     private String name;
-    private String email;
+    private int id;
+    private LocalDate date;
     private float cgpa;
 
-    public Long getId(){
-        return id;
+    
+
+    public Studententity(float cgpa, LocalDate date, int id, String name) {
+        this.cgpa = cgpa;
+        this.date = date;
+        this.id = id;
+        this.name = name;
     }
-    public void setId(Long id){
-        this.id=id;
+
+    public Studententity() {
     }
 
     
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
-        this.name=name;
-    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public LocalDate getDate() {
+        return date;
+    }
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+    public float getCgpa() {
+        return cgpa;
+    }
+    public void setCgpa(float cgpa) {
+        this.cgpa = cgpa;
+    }
+
 }
