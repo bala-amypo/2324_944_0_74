@@ -4,10 +4,14 @@ package com.example.demo.newserviceimpl;
 public class newserviceimpl implements NewfileService{
     private final NewfileRepo rep;
 
-    NewfileServiceImp
+    public NewfileServiceImpl(NewfileRepo rep){
+        this.rep=rep;
+
+    }
 
     @Override
     public NewfileEntity savedata(NewfileEntity newfile){
+        return rep.save(newfile);
 
     }
      @Override
