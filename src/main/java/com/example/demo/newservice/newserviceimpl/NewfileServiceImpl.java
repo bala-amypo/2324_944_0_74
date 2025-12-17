@@ -11,7 +11,7 @@ public class newserviceimpl implements NewfileService{
 
     @Override
     public NewfileEntity savedata(NewfileEntity newfile){
-        return rep.save(newfile);
+        return rep.save(newfile);//post
 
     }
      @Override
