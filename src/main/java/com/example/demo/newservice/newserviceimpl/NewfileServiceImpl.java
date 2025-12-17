@@ -16,19 +16,25 @@ public class newserviceimpl implements NewfileService{
     }
      @Override
     public NewfileEntity getidval(Long id){
-        return rep.get(id);
+        return rep.findById(id);//specific id
 
     }
      @Override
     public List<NewfileEntity> getall(){
-        return rep.getall();
+        return rep.findAll();//all id
 
     }
      @Override
     public NewfileEntity update(Long id, NewfileEntity newfile){
-        return rep.replace(id,newfile);
+        return rep.replace(id,newfile);//retrive id 
 
     }    
+     @Override
+    public void delete(Long id){
+        return rep.remove(id);
+    }
+
+
     
     
 }
