@@ -7,24 +7,28 @@ import jakarta.validation.constranints.*;
   
  
  
- @Entity
- 
- public class NewfileEntity {
+@Entity
+@Table(name="Student")
+public class NewfileEntity {
     @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @NotBlank(message = "should not contain spaces")
     private String name;
     @column(name=unique)
      @NotBlank(message = "no blank allowed")
      @Email(message = "invalid format")
     private String email;
-    public NewfileEntity(long id, @NotBlank(message = "should not contain spaces") String name,   @NotBlank(message = "no blank allowed")   @Email(message = "invalid format") String email) {
+    public NewfileEntity(Long id, @NotBlank(message = "should not contain spaces") String name,   @NotBlank(message = "no blank allowed")   @Email(message = "invalid format") String email) {
       this.id = id;
       this.name = name;
       this.email = email;
     }
-    public long getId() {
+
+    public NewflieEntity(){
+
+    }
+    public Long getId() {
        return id;
     }
     public void setId(long id) {
