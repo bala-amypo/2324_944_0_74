@@ -1,54 +1,36 @@
 package com.example.demo.entity;
 
-import java.time.LocalDate;
+
 
 public class Studententity {
-    @id
-    @generateValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @generateValue(strategy = GenerationType.Auto)
+   
     private String name;
-    @column(name=email)
-    private string email;
-    private string password;
-    
-
-    
-
-    public Studententity(float cgpa, LocalDate date, int id, String name) {
-        this.cgpa = cgpa;
-        this.date = date;
-        this.id = id;
-        this.name = name;
-    }
-
-    public Studententity() {
-    }
-
-    
+    private int id;
+    private String email;
     public String getName() {
         return name;
-    }
-    public void setName(String name) {
-        this.name = name;
     }
     public int getId() {
         return id;
     }
+    public String getEmail() {
+        return email;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setId(int id) {
         this.id = id;
     }
-    public LocalDate getDate() {
-        return date;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public Studententity(String name, int id, String email) {
+        this.name = name;
+        this.id = id;
+        this.email = email;
     }
-    public float getCgpa() {
-        return cgpa;
-    }
-    public void setCgpa(float cgpa) {
-        this.cgpa = cgpa;
+    public Studententity() {
     }
 
 }
